@@ -59,7 +59,15 @@ public class Trabalho {
 		ler.close();
 	}
 	
-	
+	private static boolean atendedorHandler(NoBinTree no, int valor) {
+		
+		if(no.getFilhoEsquerda() != null && no.getFilhoDireita() != null)
+			if(no.getFilhoEsquerda().getValor() == valor || no.getFilhoDireita().getValor() == valor)
+				return true;
+		
+		
+		return false;
+	}
 	
 	private static String mensagemAuto(int valor) {
 		
@@ -128,5 +136,20 @@ public class Trabalho {
 		return mensagem;
 	}
 	
+	private static void imprimirResumo () {
+		
+		System.out.println("");
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Resumo da Chamada:");
+		
+		for(int i = 0; i < resumoChamada.length; i++) {
+		
+			if(resumoChamada[i][1] == "sim")
+				System.out.println(resumoChamada[i][0]);
+		};	
+		System.out.println("Chamada terminada.");
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
 	
+	}
+
 }
