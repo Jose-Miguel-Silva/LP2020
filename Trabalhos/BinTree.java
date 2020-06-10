@@ -24,8 +24,8 @@ public interface BinTree {
 	 *                 ou null se o 'num' não existir na árvore
 	 */
 	public NoBinTree procurar( int num );
-	
-	
+
+
 	
 
 }
